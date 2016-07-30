@@ -17,7 +17,9 @@ public class Quick_Union implements Disjoint_set_ADT{
 
     private int root(int i)
     {
-        while (i != id[i]) i = id[i];
+        while (i != id[i]){ 
+            i = id[i];
+        }
         return i;
     }
     

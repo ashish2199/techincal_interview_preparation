@@ -19,7 +19,7 @@ import static org.junit.Assert.*;
  */
 public class Quick_Union_Test {
     
-        Quick_Union qu_set;
+    Quick_Union qu_set;
     
     @Before
     public void setUp() {
