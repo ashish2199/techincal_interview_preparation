@@ -10,16 +10,26 @@ package searching;
  * @author Ashish
  */
 public class Binary_Search {
+    
+    /*
+    Complexity: O(logN)
+    Worst case - O(log N)
+    Best case - omega(1)
+    
+    Space complexity - O(1)
+    */
+    
+    
     public static int binarySearch_iterative(int[] a,int item ){
         int lo=0;
         int hi=a.length-1;
         
         while(lo<=hi){
             int mid = (lo+hi)/2;
-            if( a[mid] < item ){
+            if( item > a[mid] ){
                 lo=mid+1;
             }
-            else if( a[mid] > item ){
+            else if( item < a[mid] ){
                 hi=mid-1;
             }
             else if( a[mid]==item ){
