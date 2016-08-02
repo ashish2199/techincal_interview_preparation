@@ -11,12 +11,12 @@ import static org.junit.Assert.*;
  *
  * @author Ashish
  */
-public class stack_resizable_array_test {
+public class stack_linked_list_based_test {
     Stack_ADT<Integer>  st;
     
     @Before
     public void setUp() {
-        st=new stack_resizable_array<>();
+        st=new stack_linked_list_based<>();
         //Fill the stack with 0 to 99
         for (int i = 0; i < 100; i++) {
             st.push(i);
@@ -67,4 +67,5 @@ public class stack_resizable_array_test {
         }
         assertEquals(true, st.isEmpty());
     }
+    
 }

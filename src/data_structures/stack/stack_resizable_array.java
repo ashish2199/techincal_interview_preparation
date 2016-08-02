@@ -86,7 +86,9 @@ public class stack_resizable_array<T> implements Stack_ADT<T>{
     public void resize(int newSize){
         T[] newArray = ( T[] )new Object[newSize];
         /*Copy elements from old array to new array*/
-        for (int i = 0; i < items.length; i++) {
+        /*we will use minimum so that we copy only the elements needed*/
+        int index = Math.min(items.length, newArray.length);
+        for (int i = 0; i < index; i++) {
             newArray[i] = items[i];
         }
         items=newArray;
