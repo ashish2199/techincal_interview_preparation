@@ -1,4 +1,4 @@
-package star_patterns_printing;
+package problems.star_pattern_output;
 public class pattern_triangle_A_and_stars {
 /*  
     convert pattern into boxes and objserve the position of stars and spaces

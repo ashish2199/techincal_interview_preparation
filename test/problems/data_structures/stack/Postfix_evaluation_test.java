@@ -5,8 +5,6 @@
  */
 package problems.data_structures.stack;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.junit.After;
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
@@ -61,6 +59,11 @@ public class Postfix_evaluation_test {
             int result2 = Postfix_Evaluation.evaluatePostfixExpression(postfix_str2);
             assertEquals(answer2, result2);
         
+            String postfix_str3 = "5 1 2 + 4 * 3 - +";
+            int answer3 = 14;
+            int result3 = Postfix_Evaluation.evaluatePostfixExpression(postfix_str3);
+            assertEquals(answer3, result3);
+            
         } catch (postfix_evaluation_exception ex) {
             System.out.println("Error in hard part");
             assert(false);

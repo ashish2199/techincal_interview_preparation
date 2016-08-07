@@ -1,4 +1,4 @@
-package strings;
+package problems.strings;
 import java.util.Scanner;
 public class reverse_string_recursion {
     public static void main(String[] args) {
