@@ -10,6 +10,21 @@ import data_structures.stack.stack_resizable_array;
  * @author Ashish
  */
 public class Postfix_Evaluation {
+    /*
+    Postfix expression is the one in which operator comes behind the two operands
+    Also known as Reverse Polish Notation.
+    
+    Algo - 
+    Parse expression from left to right : 
+        if you encounter a operand then push it onto stack.
+        if you encounter a operator then pop two operands from stack and evaluate them as pop2 opertor pop1
+    At end one value will remain in stack that will be the answer of evaluation of that expression.
+    
+    remember we evaluate the values obtained from poping in reverse order.
+    
+    Analysis - theta(N) where N is the number of tokens in expression.
+    */
+    
     static int evaluatePostfixExpression(String postfix_expr) throws postfix_evaluation_exception{
         stack_resizable_array<Integer> operand_stack = new stack_resizable_array<>();
             
@@ -43,6 +58,7 @@ public class Postfix_Evaluation {
                             case "/": result=op2/op1;
                                       break;                             
                         }
+                        
                         operand_stack.push(result);
                     }
                 }
@@ -52,7 +68,6 @@ public class Postfix_Evaluation {
             return operand_stack.pop();
         }
         else{
-            System.out.println("Error occured");
             throw new postfix_evaluation_exception();
         }
     }
