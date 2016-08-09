@@ -18,7 +18,7 @@ public class mathematical_expression_evaluation_test {
     
     
     @Test
-    public void evaluate_expr_test(){
+    public void evaluate_expr_using_postfix_test(){
         try {
             String expr = "( 10 + 5 )";
             int answer = 15;
@@ -43,5 +43,22 @@ public class mathematical_expression_evaluation_test {
         } catch (Postfix_Evaluation.postfix_evaluation_exception ex) {
             Logger.getLogger(mathematical_expression_evaluation_test.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    public void evaluate_expr_two_stack_test(){
+        String expr = "( 10 + 5 )";
+        int answer = 15;
+        int result = problems.data_structures.stack.mathematical_expression_evaluation.evaluate_expression_two_stack(expr);
+        assertEquals(answer,result);
+        
+        expr = "( 10 - 5 )";
+        answer = 5;
+        result = problems.data_structures.stack.mathematical_expression_evaluation.evaluate_expression_two_stack(expr);
+        assertEquals(answer,result);
+
+        expr = "( 10 - 5 ) * ( 10 * 2 )";
+        answer = 100;
+        result = problems.data_structures.stack.mathematical_expression_evaluation.evaluate_expression_two_stack(expr);
+        assertEquals(answer,result);
     }
 }
