@@ -44,7 +44,7 @@ public class mathematical_expression_evaluation_test {
             Logger.getLogger(mathematical_expression_evaluation_test.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+    @Test
     public void evaluate_expr_two_stack_test(){
         String expr = "( 10 + 5 )";
         int answer = 15;

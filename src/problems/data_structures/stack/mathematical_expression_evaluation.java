@@ -34,7 +34,7 @@ public class mathematical_expression_evaluation {
             {
 
                 //operator is found
-                if( token.equals("/") || token.equals("*") || token.equals("+") || token.equals("-") ){
+                if( token.equals("/") || token.equals("*") || token.equals("+") || token.equals("-") || token.equals(")") ){
                     
                     //make sure you perform operation as pop2 _ pop1 and not pop1 _ pop2 because of reversing nature of stack
                     switch(token){
