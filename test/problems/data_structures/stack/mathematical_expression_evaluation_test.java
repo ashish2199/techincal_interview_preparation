@@ -56,7 +56,7 @@ public class mathematical_expression_evaluation_test {
         result = problems.data_structures.stack.mathematical_expression_evaluation.evaluate_expression_two_stack(expr);
         assertEquals(answer,result);
 
-        expr = "( 10 - 5 ) * ( 10 * 2 )";
+        expr = "( ( 10 - 5 ) * ( 10 * 2 ) )";
         answer = 100;
         result = problems.data_structures.stack.mathematical_expression_evaluation.evaluate_expression_two_stack(expr);
         assertEquals(answer,result);
