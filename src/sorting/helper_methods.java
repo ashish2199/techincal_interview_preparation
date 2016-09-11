@@ -22,7 +22,13 @@ public class helper_methods {
         }
         return true;
     }
-    
+    public static boolean isSorted(Comparable[] a,int low,int high)
+    {
+        for (int i = low+1; i < high; i++){
+            if (less(a[i], a[i-1])) return false;
+        }
+        return true;
+    }
     /*
     O(N) Fisher yates algorithm
     In iteration Ith , pick integer between 0 and I uniformly at random 
