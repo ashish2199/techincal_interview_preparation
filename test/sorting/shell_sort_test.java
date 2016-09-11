@@ -26,5 +26,9 @@ public class shell_sort_test {
         shell_sort.sort(b);
         assertArrayEquals(helper_methods.getValuesArray(100), b);
         
+        Integer c[] = helper_methods.getRandomValuesArray(10000);
+        shell_sort.sort(c);
+        assertArrayEquals(helper_methods.getValuesArray(10000), c);
+        
     }
 }
