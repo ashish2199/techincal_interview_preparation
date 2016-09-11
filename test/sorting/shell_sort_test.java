@@ -12,23 +12,19 @@ import static org.junit.Assert.*;
  *
  * @author Ashish
  */
-public class selection_sort_test {
-    
-    public selection_sort_test() {
-        
-    }
+public class shell_sort_test {
     
     @Test
-    public void selection_sort_test(){
+    public void shell_sort_test(){
+        
         Integer a[]=new Integer[]{1,0,9,8,7,6,5,2,3,4};
-        sorting.selection_sort.sort(a);
+        sorting.shell_sort.sort(a);
         Integer exp[]=new Integer[]{0,1,2,3,4,5,6,7,8,9};
         assertArrayEquals(exp, a);
         
         Integer b[] = helper_methods.getRandomValuesArray(100);
-        selection_sort.sort(b);
+        shell_sort.sort(b);
         assertArrayEquals(helper_methods.getValuesArray(100), b);
         
     }
-    
 }
