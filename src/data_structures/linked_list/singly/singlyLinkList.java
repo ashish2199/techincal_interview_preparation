@@ -161,6 +161,47 @@ public class singlyLinkList{
         System.out.println("the Kth node from end in this linked list is " + tmpSecond.data);
     }
     
-    
+    public Node mergeTwoSortedLists(Node l1, Node l2) {
+        Node min,h=null;
+        Node t=null;
+        while(true){
+            //if both list are over
+            if(l1==null&&l2==null){break;}
+
+            //if both list are present
+            if(l1!=null&&l2!=null){
+                if(l1.data<=l2.data){
+                    min=l1;
+                    l1=l1.next;
+                }else{
+                    min=l2;
+                    l2=l2.next;
+                }
+            }
+            //if one of the list is over
+            else{
+                //then min will be remaining list
+                min=(l1!=null)?l1:l2;
+                if(l1!=null){
+                    l1=l1.next;
+                }
+                else{
+                    l2=l2.next;
+                }
+            }
+            
+            //t refers to the tail of the list. we are adding at the end of list
+            if(t==null){
+                t=min;
+                h=t;
+            }
+            else{
+                t.next=min;
+                t=t.next;
+            }
+        }
+        t=null;
+        return h;
+    }
 //</editor-fold>
 }

@@ -48,7 +48,7 @@ public class merge_sort {
 
     /*
     Abstract inplace merge
-    Here we are using a auxilary array to hold the data
+    Here we are using a auxilary array to hold the data before merging them
     we are using assertions to check the invariants
     */
     private static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi)
