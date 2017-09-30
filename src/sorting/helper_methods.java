@@ -72,4 +72,10 @@ public class helper_methods {
         return a;
     }
     
+    public static void printArray(Comparable a[]){
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(""+a[i]+" ");
+        }
+        System.out.println("");
+    }
 }
