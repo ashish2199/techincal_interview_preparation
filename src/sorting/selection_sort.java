@@ -14,7 +14,7 @@ public class selection_sort {
     /*
 Selection Sort 
     In the I th iteration go through array find the shortest remaining entry to
-    the right of I and swap it with first entry in the array.
+    the right of I and swap it with Ith location in the array.
     
     Data involvement is minimum – Every item is put into its final order with 
     just one exchange.
