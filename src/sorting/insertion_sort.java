@@ -33,7 +33,7 @@ public class insertion_sort {
         int N = a.length;
         
         /*Move through array*/
-        for (int i = 0; i < N; i++){
+        for (int i = 1; i < N; i++){
             /*Piecewise swap till it is in its proper place*/
             for (int j = i; j > 0; j--){
                 if (less(a[j], a[j-1]))
